@@ -72,7 +72,7 @@ class PhoneModel {
   isValidLandlineNumber(number) {
     const core = this.extractCore(number);
     if (core.length !== 9) return false;
-    const areaCode = '0' + core.substring(0, 3);
+    const areaCode = '0' + core.substring(0, 2);
     const allAreaCodes = Object.values(this.landlineAreaCodes);
     return allAreaCodes.includes(areaCode);
   }

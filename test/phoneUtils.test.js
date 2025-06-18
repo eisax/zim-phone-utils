@@ -9,59 +9,59 @@ describe('zim-phone-utils', () => {
     test('should validate Econet mobile numbers', () => {
       expect(phoneUtils.isValid('0772123456')).toBe(true);
       expect(phoneUtils.isValid('0782123456')).toBe(true);
-      // expect(phoneUtils.isValid('+263772123456')).toBe(true);
-      // expect(phoneUtils.isValid('263772123456')).toBe(true);
+      expect(phoneUtils.isValid('+263772123456')).toBe(true);
+      expect(phoneUtils.isValid('263772123456')).toBe(true);
     });
 
-    // test('should validate NetOne mobile numbers', () => {
-    //   expect(phoneUtils.isValid('0712123456')).toBe(true);
-    //   expect(phoneUtils.isValid('+263712123456')).toBe(true);
-    //   expect(phoneUtils.isValid('263712123456')).toBe(true);
-    // });
+    test('should validate NetOne mobile numbers', () => {
+      expect(phoneUtils.isValid('0712123456')).toBe(true);
+      expect(phoneUtils.isValid('+263712123456')).toBe(true);
+      expect(phoneUtils.isValid('263712123456')).toBe(true);
+    });
 
-    // test('should validate Telecel mobile numbers', () => {
-    //   expect(phoneUtils.isValid('0732123456')).toBe(true);
-    //   expect(phoneUtils.isValid('+263732123456')).toBe(true);
-    //   expect(phoneUtils.isValid('263732123456')).toBe(true);
-    // });
+    test('should validate Telecel mobile numbers', () => {
+      expect(phoneUtils.isValid('0732123456')).toBe(true);
+      expect(phoneUtils.isValid('+263732123456')).toBe(true);
+      expect(phoneUtils.isValid('263732123456')).toBe(true);
+    });
 
-    // test('should reject invalid mobile numbers', () => {
-    //   expect(phoneUtils.isValid('0792123456')).toBe(false); // Invalid prefix
-    //   expect(phoneUtils.isValid('077212345')).toBe(false);  // Too short
-    //   expect(phoneUtils.isValid('07721234567')).toBe(false); // Too long
-    //   expect(phoneUtils.isValid('0672123456')).toBe(false);  // Wrong prefix
-    // });
+    test('should reject invalid mobile numbers', () => {
+      expect(phoneUtils.isValid('0792123456')).toBe(false); // Invalid prefix
+      expect(phoneUtils.isValid('077212345')).toBe(false);  // Too short
+      expect(phoneUtils.isValid('07721234567')).toBe(false); // Too long
+      expect(phoneUtils.isValid('0372188888')).toBe(false);  // Wrong prefix
+    });
   });
 
-  // describe('Landline Number Validation', () => {
-  //   test('should validate Harare landline numbers', () => {
-  //     expect(phoneUtils.isValid('0242123456')).toBe(true);
-  //     expect(phoneUtils.isValid('+263242123456')).toBe(true);
-  //     expect(phoneUtils.isValid('263242123456')).toBe(true);
-  //   });
+  describe('Landline Number Validation', () => {
+    test('should validate Harare landline numbers', () => {
+      expect(phoneUtils.isValid('0242123456')).toBe(true);
+      expect(phoneUtils.isValid('+263242123456')).toBe(true);
+      expect(phoneUtils.isValid('263242123456')).toBe(true);
+    });
 
-  //   test('should validate Bulawayo landline numbers', () => {
-  //     expect(phoneUtils.isValid('0292123456')).toBe(true);
-  //     expect(phoneUtils.isValid('+263292123456')).toBe(true);
-  //     expect(phoneUtils.isValid('263292123456')).toBe(true);
-  //   });
+    test('should validate Bulawayo landline numbers', () => {
+      expect(phoneUtils.isValid('0292123456')).toBe(true);
+      expect(phoneUtils.isValid('+263292123456')).toBe(true);
+      expect(phoneUtils.isValid('263292123456')).toBe(true);
+    });
 
-  //   test('should validate other city landline numbers', () => {
-  //     expect(phoneUtils.isValid('0542123456')).toBe(true); // Gweru
-  //     expect(phoneUtils.isValid('0202123456')).toBe(true); // Mutare
-  //     expect(phoneUtils.isValid('0392123456')).toBe(true); // Masvingo
-  //     expect(phoneUtils.isValid('0552123456')).toBe(true); // Kwekwe
-  //     expect(phoneUtils.isValid('0672123456')).toBe(true); // Chinhoyi
-  //     expect(phoneUtils.isValid('0652123456')).toBe(true); // Marondera
-  //     expect(phoneUtils.isValid('0662123456')).toBe(true); // Bindura
-  //   });
+    test('should validate other city landline numbers', () => {
+      expect(phoneUtils.isValid('0542123456')).toBe(true); // Gweru
+      expect(phoneUtils.isValid('0202123456')).toBe(true); // Mutare
+      expect(phoneUtils.isValid('0392123456')).toBe(true); // Masvingo
+      expect(phoneUtils.isValid('0552123456')).toBe(true); // Kwekwe
+      expect(phoneUtils.isValid('0672123456')).toBe(true); // Chinhoyi
+      expect(phoneUtils.isValid('0652123456')).toBe(true); // Marondera
+      expect(phoneUtils.isValid('0662123456')).toBe(true); // Bindura
+    });
 
-  //   test('should reject invalid landline numbers', () => {
-  //     expect(phoneUtils.isValid('0252123456')).toBe(false); // Invalid area code
-  //     expect(phoneUtils.isValid('024212345')).toBe(false);  // Too short
-  //     expect(phoneUtils.isValid('02421234567')).toBe(false); // Too long
-  //   });
-  // });
+    test('should reject invalid landline numbers', () => {
+      expect(phoneUtils.isValid('0252123456')).toBe(false); // Invalid area code
+      expect(phoneUtils.isValid('024212345')).toBe(false);  // Too short
+      expect(phoneUtils.isValid('02421234567')).toBe(false); // Too long
+    });
+  });
 
   // describe('Number Formatting', () => {
   //   test('should format mobile numbers to local format', () => {
