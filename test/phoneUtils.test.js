@@ -108,56 +108,56 @@ describe('zim-phone-utils', () => {
       expect(phoneUtils.detectCarrier('+263772123456')).toBe('Econet');
     });
 
-  //   test('should detect NetOne carrier', () => {
-  //     expect(phoneUtils.detectCarrier('0712123456')).toBe('NetOne');
-  //     expect(phoneUtils.detectCarrier('+263712123456')).toBe('NetOne');
-  //   });
+    test('should detect NetOne carrier', () => {
+      expect(phoneUtils.detectCarrier('0712123456')).toBe('NetOne');
+      expect(phoneUtils.detectCarrier('+263712123456')).toBe('NetOne');
+    });
 
-  //   test('should detect Telecel carrier', () => {
-  //     expect(phoneUtils.detectCarrier('0732123456')).toBe('Telecel');
-  //     expect(phoneUtils.detectCarrier('+263732123456')).toBe('Telecel');
-  //   });
+    test('should detect Telecel carrier', () => {
+      expect(phoneUtils.detectCarrier('0732123456')).toBe('Telecel');
+      expect(phoneUtils.detectCarrier('+263732123456')).toBe('Telecel');
+    });
 
-  //   test('should return null for landline numbers', () => {
-  //     expect(phoneUtils.detectCarrier('0242123456')).toBe(null);
-  //     expect(phoneUtils.detectCarrier('+263242123456')).toBe(null);
-  //   });
+    test('should return null for landline numbers', () => {
+      expect(phoneUtils.detectCarrier('0242123456')).toBe(null);
+      expect(phoneUtils.detectCarrier('+263242123456')).toBe(null);
+    });
 
-  //   test('should return null for invalid numbers', () => {
-  //     expect(phoneUtils.detectCarrier('invalid')).toBe(null);
-  //   });
+    test('should return null for invalid numbers', () => {
+      expect(phoneUtils.detectCarrier('invalid')).toBe(null);
+    });
   });
 
-  // describe('Area Detection', () => {
-  //   test('should detect Harare area', () => {
-  //     expect(phoneUtils.detectArea('0242123456')).toBe('Harare');
-  //     expect(phoneUtils.detectArea('+263242123456')).toBe('Harare');
-  //   });
+  describe('Area Detection', () => {
+      test('should detect Harare area', () => {
+        expect(phoneUtils.detectArea('0242123456')).toBe('Harare');
+        expect(phoneUtils.detectArea('+263242123456')).toBe('Harare');
+      });
 
-  //   test('should detect Bulawayo area', () => {
-  //     expect(phoneUtils.detectArea('0292123456')).toBe('Bulawayo');
-  //     expect(phoneUtils.detectArea('+263292123456')).toBe('Bulawayo');
-  //   });
+    //   test('should detect Bulawayo area', () => {
+    //     expect(phoneUtils.detectArea('0292123456')).toBe('Bulawayo');
+    //     expect(phoneUtils.detectArea('+263292123456')).toBe('Bulawayo');
+    //   });
 
-  //   test('should detect other areas', () => {
-  //     expect(phoneUtils.detectArea('0542123456')).toBe('Gweru');
-  //     expect(phoneUtils.detectArea('0202123456')).toBe('Mutare');
-  //     expect(phoneUtils.detectArea('0392123456')).toBe('Masvingo');
-  //     expect(phoneUtils.detectArea('0552123456')).toBe('Kwekwe');
-  //     expect(phoneUtils.detectArea('0672123456')).toBe('Chinhoyi');
-  //     expect(phoneUtils.detectArea('0652123456')).toBe('Marondera');
-  //     expect(phoneUtils.detectArea('0662123456')).toBe('Bindura');
-  //   });
+    //   test('should detect other areas', () => {
+    //     expect(phoneUtils.detectArea('0542123456')).toBe('Gweru');
+    //     expect(phoneUtils.detectArea('0202123456')).toBe('Mutare');
+    //     expect(phoneUtils.detectArea('0392123456')).toBe('Masvingo');
+    //     expect(phoneUtils.detectArea('0552123456')).toBe('Kwekwe');
+    //     expect(phoneUtils.detectArea('0672123456')).toBe('Chinhoyi');
+    //     expect(phoneUtils.detectArea('0652123456')).toBe('Marondera');
+    //     expect(phoneUtils.detectArea('0662123456')).toBe('Bindura');
+    //   });
 
-  //   test('should return null for mobile numbers', () => {
-  //     expect(phoneUtils.detectArea('0772123456')).toBe(null);
-  //     expect(phoneUtils.detectArea('+263772123456')).toBe(null);
-  //   });
+    //   test('should return null for mobile numbers', () => {
+    //     expect(phoneUtils.detectArea('0772123456')).toBe(null);
+    //     expect(phoneUtils.detectArea('+263772123456')).toBe(null);
+    //   });
 
-  //   test('should return null for invalid numbers', () => {
-  //     expect(phoneUtils.detectArea('invalid')).toBe(null);
-  //   });
-  // });
+    //   test('should return null for invalid numbers', () => {
+    //     expect(phoneUtils.detectArea('invalid')).toBe(null);
+    //   });
+  });
 
   // describe('Number Type Detection', () => {
   //   test('should detect mobile numbers', () => {
