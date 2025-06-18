@@ -112,7 +112,7 @@ class PhoneModel {
   detectMobileCarrier(number) {
     if (!this.isValidMobileNumber(number)) return null;
     const core = this.extractCore(number);
-    const prefix = '0' + core.substring(0, 3);
+    const prefix = '0' + core.substring(0, 2);
     if (this.mobileCarriers.econet.includes(prefix)) return 'Econet';
     if (this.mobileCarriers.netone.includes(prefix)) return 'NetOne';
     if (this.mobileCarriers.telecel.includes(prefix)) return 'Telecel';
