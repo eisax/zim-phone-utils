@@ -1,0 +1,39 @@
+{
+  "name": "zim-phone-utils",
+  "version": "1.0.0",
+  "description": "A JavaScript utility library for validating, formatting, and detecting carriers for Zimbabwean phone numbers (mobile and landline)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "zimbabwe",
+    "phone",
+    "validation",
+    "formatting",
+    "carrier",
+    "mobile",
+    "landline",
+    "econet",
+    "netone",
+    "telecel"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/zim-phone-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/zim-phone-utils/issues"
+  },
+  "homepage": "https://github.com/yourusername/zim-phone-utils#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
