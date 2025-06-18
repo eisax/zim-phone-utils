@@ -125,7 +125,7 @@ class PhoneModel {
   detectLandlineArea(number) {
     if (!this.isValidLandlineNumber(number)) return null;
     const core = this.extractCore(number);
-    const areaCode = '0' + core.substring(0, 3);
+    const areaCode = '0' + core.substring(0, 2);
     for (const [city, code] of Object.entries(this.landlineAreaCodes)) {
       if (code === areaCode) return city.charAt(0).toUpperCase() + city.slice(1);
     }
