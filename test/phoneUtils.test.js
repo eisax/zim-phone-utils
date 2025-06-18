@@ -63,50 +63,50 @@ describe('zim-phone-utils', () => {
     });
   });
 
-  // describe('Number Formatting', () => {
-  //   test('should format mobile numbers to local format', () => {
-  //     expect(phoneUtils.formatLocal('0772123456')).toBe('0772123456');
-  //     expect(phoneUtils.formatLocal('+263772123456')).toBe('0772123456');
-  //     expect(phoneUtils.formatLocal('263772123456')).toBe('0772123456');
-  //   });
+  describe('Number Formatting', () => {
+    test('should format mobile numbers to local format', () => {
+      expect(phoneUtils.formatLocal('0772123456')).toBe('0772123456');
+      expect(phoneUtils.formatLocal('+263772123456')).toBe('0772123456');
+      expect(phoneUtils.formatLocal('263772123456')).toBe('0772123456');
+    });
 
-  //   test('should format landline numbers to local format', () => {
-  //     expect(phoneUtils.formatLocal('0242123456')).toBe('0242123456');
-  //     expect(phoneUtils.formatLocal('+263242123456')).toBe('0242123456');
-  //     expect(phoneUtils.formatLocal('263242123456')).toBe('0242123456');
-  //   });
+    test('should format landline numbers to local format', () => {
+      expect(phoneUtils.formatLocal('0242123456')).toBe('0242123456');
+      expect(phoneUtils.formatLocal('+263242123456')).toBe('0242123456');
+      expect(phoneUtils.formatLocal('263242123456')).toBe('0242123456');
+    });
 
-  //   test('should format mobile numbers to international format', () => {
-  //     expect(phoneUtils.formatInternational('0772123456')).toBe('+263772123456');
-  //     expect(phoneUtils.formatInternational('+263772123456')).toBe('+263772123456');
-  //     expect(phoneUtils.formatInternational('263772123456')).toBe('+263772123456');
-  //   });
+    test('should format mobile numbers to international format', () => {
+      expect(phoneUtils.formatInternational('0772123456')).toBe('+263772123456');
+      expect(phoneUtils.formatInternational('+263772123456')).toBe('+263772123456');
+      expect(phoneUtils.formatInternational('263772123456')).toBe('+263772123456');
+    });
 
-  //   test('should format landline numbers to international format', () => {
-  //     expect(phoneUtils.formatInternational('0242123456')).toBe('+263242123456');
-  //     expect(phoneUtils.formatInternational('+263242123456')).toBe('+263242123456');
-  //     expect(phoneUtils.formatInternational('263242123456')).toBe('+263242123456');
-  //   });
+    test('should format landline numbers to international format', () => {
+      expect(phoneUtils.formatInternational('0242123456')).toBe('+263242123456');
+      expect(phoneUtils.formatInternational('+263242123456')).toBe('+263242123456');
+      expect(phoneUtils.formatInternational('263242123456')).toBe('+263242123456');
+    });
 
-  //   test('should format to both formats', () => {
-  //     const result = phoneUtils.formatBoth('0772123456');
-  //     expect(result.local).toBe('0772123456');
-  //     expect(result.international).toBe('+263772123456');
-  //   });
+    test('should format to both formats', () => {
+      const result = phoneUtils.formatBoth('0772123456');
+      expect(result.local).toBe('0772123456');
+      expect(result.international).toBe('+263772123456');
+    });
 
-  //   test('should throw error for invalid numbers during formatting', () => {
-  //     expect(() => phoneUtils.formatLocal('invalid')).toThrow('Invalid phone number provided');
-  //     expect(() => phoneUtils.formatInternational('invalid')).toThrow('Invalid phone number provided');
-  //     expect(() => phoneUtils.formatBoth('invalid')).toThrow('Invalid phone number provided');
-  //   });
-  // });
+    test('should throw error for invalid numbers during formatting', () => {
+      expect(() => phoneUtils.formatLocal('invalid')).toThrow('Invalid phone number provided');
+      expect(() => phoneUtils.formatInternational('invalid')).toThrow('Invalid phone number provided');
+      expect(() => phoneUtils.formatBoth('invalid')).toThrow('Invalid phone number provided');
+    });
+  });
 
-  // describe('Carrier Detection', () => {
-  //   test('should detect Econet carrier', () => {
-  //     expect(phoneUtils.detectCarrier('0772123456')).toBe('Econet');
-  //     expect(phoneUtils.detectCarrier('0782123456')).toBe('Econet');
-  //     expect(phoneUtils.detectCarrier('+263772123456')).toBe('Econet');
-  //   });
+  describe('Carrier Detection', () => {
+    test('should detect Econet carrier', () => {
+      expect(phoneUtils.detectCarrier('0772123456')).toBe('Econet');
+      expect(phoneUtils.detectCarrier('0782123456')).toBe('Econet');
+      expect(phoneUtils.detectCarrier('+263772123456')).toBe('Econet');
+    });
 
   //   test('should detect NetOne carrier', () => {
   //     expect(phoneUtils.detectCarrier('0712123456')).toBe('NetOne');
@@ -126,7 +126,7 @@ describe('zim-phone-utils', () => {
   //   test('should return null for invalid numbers', () => {
   //     expect(phoneUtils.detectCarrier('invalid')).toBe(null);
   //   });
-  // });
+  });
 
   // describe('Area Detection', () => {
   //   test('should detect Harare area', () => {
@@ -258,4 +258,5 @@ describe('zim-phone-utils', () => {
   //     expect(phoneUtils.isValid([])).toBe(false);
   //   });
   // });
+
 }); 
