@@ -20,16 +20,16 @@
     "netone",
     "telecel"
   ],
-  "author": "Your Name",
+  "author": "Kudah Ndhlovu",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/zim-phone-utils.git"
+    "url": "https://github.com/eisax/zim-phone-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/zim-phone-utils/issues"
+    "url": "https://github.com/eisax/zim-phone-utils/issues"
   },
-  "homepage": "https://github.com/yourusername/zim-phone-utils#readme",
+  "homepage": "https://github.com/eisax/zim-phone-utils#readme",
   "devDependencies": {
     "jest": "^29.7.0"
   },

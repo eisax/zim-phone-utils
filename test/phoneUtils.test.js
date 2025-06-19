@@ -129,134 +129,134 @@ describe('zim-phone-utils', () => {
   });
 
   describe('Area Detection', () => {
-      test('should detect Harare area', () => {
-        expect(phoneUtils.detectArea('0242123456')).toBe('Harare');
-        expect(phoneUtils.detectArea('+263242123456')).toBe('Harare');
-      });
+    test('should detect Harare area', () => {
+      expect(phoneUtils.detectArea('0242123456')).toBe('Harare');
+      expect(phoneUtils.detectArea('+263242123456')).toBe('Harare');
+    });
 
-    //   test('should detect Bulawayo area', () => {
-    //     expect(phoneUtils.detectArea('0292123456')).toBe('Bulawayo');
-    //     expect(phoneUtils.detectArea('+263292123456')).toBe('Bulawayo');
-    //   });
+    test('should detect Bulawayo area', () => {
+      expect(phoneUtils.detectArea('0292123456')).toBe('Bulawayo');
+      expect(phoneUtils.detectArea('+263292123456')).toBe('Bulawayo');
+    });
 
-    //   test('should detect other areas', () => {
-    //     expect(phoneUtils.detectArea('0542123456')).toBe('Gweru');
-    //     expect(phoneUtils.detectArea('0202123456')).toBe('Mutare');
-    //     expect(phoneUtils.detectArea('0392123456')).toBe('Masvingo');
-    //     expect(phoneUtils.detectArea('0552123456')).toBe('Kwekwe');
-    //     expect(phoneUtils.detectArea('0672123456')).toBe('Chinhoyi');
-    //     expect(phoneUtils.detectArea('0652123456')).toBe('Marondera');
-    //     expect(phoneUtils.detectArea('0662123456')).toBe('Bindura');
-    //   });
+    test('should detect other areas', () => {
+      expect(phoneUtils.detectArea('0542123456')).toBe('Gweru');
+      expect(phoneUtils.detectArea('0202123456')).toBe('Mutare');
+      expect(phoneUtils.detectArea('0392123456')).toBe('Masvingo');
+      expect(phoneUtils.detectArea('0552123456')).toBe('Kwekwe');
+      expect(phoneUtils.detectArea('0672123456')).toBe('Chinhoyi');
+      expect(phoneUtils.detectArea('0652123456')).toBe('Marondera');
+      expect(phoneUtils.detectArea('0662123456')).toBe('Bindura');
+    });
 
-    //   test('should return null for mobile numbers', () => {
-    //     expect(phoneUtils.detectArea('0772123456')).toBe(null);
-    //     expect(phoneUtils.detectArea('+263772123456')).toBe(null);
-    //   });
+    test('should return null for mobile numbers', () => {
+      expect(phoneUtils.detectArea('0772123456')).toBe(null);
+      expect(phoneUtils.detectArea('+263772123456')).toBe(null);
+    });
 
-    //   test('should return null for invalid numbers', () => {
-    //     expect(phoneUtils.detectArea('invalid')).toBe(null);
-    //   });
+    test('should return null for invalid numbers', () => {
+      expect(phoneUtils.detectArea('invalid')).toBe(null);
+    });
   });
 
-  // describe('Number Type Detection', () => {
-  //   test('should detect mobile numbers', () => {
-  //     expect(phoneUtils.getNumberType('0772123456')).toBe('mobile');
-  //     expect(phoneUtils.getNumberType('0712123456')).toBe('mobile');
-  //     expect(phoneUtils.getNumberType('0732123456')).toBe('mobile');
-  //   });
+  describe('Number Type Detection', () => {
+    test('should detect mobile numbers', () => {
+      expect(phoneUtils.getNumberType('0772123456')).toBe('mobile');
+      expect(phoneUtils.getNumberType('0712123456')).toBe('mobile');
+      expect(phoneUtils.getNumberType('0732123456')).toBe('mobile');
+    });
 
-  //   test('should detect landline numbers', () => {
-  //     expect(phoneUtils.getNumberType('0242123456')).toBe('landline');
-  //     expect(phoneUtils.getNumberType('0292123456')).toBe('landline');
-  //   });
+    test('should detect landline numbers', () => {
+      expect(phoneUtils.getNumberType('0242123456')).toBe('landline');
+      expect(phoneUtils.getNumberType('0292123456')).toBe('landline');
+    });
 
-  //   test('should detect invalid numbers', () => {
-  //     expect(phoneUtils.getNumberType('invalid')).toBe('invalid');
-  //     expect(phoneUtils.getNumberType('0792123456')).toBe('invalid');
-  //   });
+    test('should detect invalid numbers', () => {
+      expect(phoneUtils.getNumberType('invalid')).toBe('invalid');
+      expect(phoneUtils.getNumberType('0792123456')).toBe('invalid');
+    });
 
-  //   test('should use convenience methods', () => {
-  //     expect(phoneUtils.isMobile('0772123456')).toBe(true);
-  //     expect(phoneUtils.isMobile('0242123456')).toBe(false);
-  //     expect(phoneUtils.isLandline('0242123456')).toBe(true);
-  //     expect(phoneUtils.isLandline('0772123456')).toBe(false);
-  //   });
-  // });
+    test('should use convenience methods', () => {
+      expect(phoneUtils.isMobile('0772123456')).toBe(true);
+      expect(phoneUtils.isMobile('0242123456')).toBe(false);
+      expect(phoneUtils.isLandline('0242123456')).toBe(true);
+      expect(phoneUtils.isLandline('0772123456')).toBe(false);
+    });
+  });
 
-  // describe('Comprehensive Phone Info', () => {
-  //   test('should provide complete mobile number info', () => {
-  //     const info = phoneUtils.getPhoneInfo('0772123456');
-  //     expect(info.isValid).toBe(true);
-  //     expect(info.type).toBe('mobile');
-  //     expect(info.local).toBe('0772123456');
-  //     expect(info.international).toBe('+263772123456');
-  //     expect(info.carrier).toBe('Econet');
-  //     expect(info.area).toBe(null);
-  //   });
+  describe('Comprehensive Phone Info', () => {
+    test('should provide complete mobile number info', () => {
+      const info = phoneUtils.getPhoneInfo('0772123456');
+      expect(info.isValid).toBe(true);
+      expect(info.type).toBe('mobile');
+      expect(info.local).toBe('0772123456');
+      expect(info.international).toBe('+263772123456');
+      expect(info.carrier).toBe('Econet');
+      expect(info.area).toBe(null);
+    });
 
-  //   test('should provide complete landline number info', () => {
-  //     const info = phoneUtils.getPhoneInfo('0242123456');
-  //     expect(info.isValid).toBe(true);
-  //     expect(info.type).toBe('landline');
-  //     expect(info.local).toBe('0242123456');
-  //     expect(info.international).toBe('+263242123456');
-  //     expect(info.carrier).toBe(null);
-  //     expect(info.area).toBe('Harare');
-  //   });
+    test('should provide complete landline number info', () => {
+      const info = phoneUtils.getPhoneInfo('0242123456');
+      expect(info.isValid).toBe(true);
+      expect(info.type).toBe('landline');
+      expect(info.local).toBe('0242123456');
+      expect(info.international).toBe('+263242123456');
+      expect(info.carrier).toBe(null);
+      expect(info.area).toBe('Harare');
+    });
 
-  //   test('should handle invalid numbers', () => {
-  //     const info = phoneUtils.getPhoneInfo('invalid');
-  //     expect(info.isValid).toBe(false);
-  //     expect(info.type).toBe('invalid');
-  //     expect(info.local).toBe(null);
-  //     expect(info.international).toBe(null);
-  //     expect(info.carrier).toBe(null);
-  //     expect(info.area).toBe(null);
-  //   });
-  // });
+    test('should handle invalid numbers', () => {
+      const info = phoneUtils.getPhoneInfo('invalid');
+      expect(info.isValid).toBe(false);
+      expect(info.type).toBe('invalid');
+      expect(info.local).toBe(null);
+      expect(info.international).toBe(null);
+      expect(info.carrier).toBe(null);
+      expect(info.area).toBe(null);
+    });
+  });
 
-  // describe('Utility Functions', () => {
-  //   test('should return carrier prefixes', () => {
-  //     const prefixes = phoneUtils.getCarrierPrefixes();
-  //     expect(prefixes.econet).toEqual(['077', '078']);
-  //     expect(prefixes.netone).toEqual(['071']);
-  //     expect(prefixes.telecel).toEqual(['073']);
-  //   });
+  describe('Utility Functions', () => {
+    test('should return carrier prefixes', () => {
+      const prefixes = phoneUtils.getCarrierPrefixes();
+      expect(prefixes.econet).toEqual(['077', '078']);
+      expect(prefixes.netone).toEqual(['071']);
+      expect(prefixes.telecel).toEqual(['073']);
+    });
 
-  //   test('should return area codes', () => {
-  //     const areaCodes = phoneUtils.getAreaCodes();
-  //     expect(areaCodes.harare).toBe('024');
-  //     expect(areaCodes.bulawayo).toBe('029');
-  //     expect(areaCodes.gweru).toBe('054');
-  //     expect(areaCodes.mutare).toBe('020');
-  //     expect(areaCodes.masvingo).toBe('039');
-  //     expect(areaCodes.kwekwe).toBe('055');
-  //     expect(areaCodes.chinhoyi).toBe('067');
-  //     expect(areaCodes.marondera).toBe('065');
-  //     expect(areaCodes.bindura).toBe('066');
-  //   });
-  // });
+    test('should return area codes', () => {
+      const areaCodes = phoneUtils.getAreaCodes();
+      expect(areaCodes.harare).toBe('024');
+      expect(areaCodes.bulawayo).toBe('029');
+      expect(areaCodes.gweru).toBe('054');
+      expect(areaCodes.mutare).toBe('020');
+      expect(areaCodes.masvingo).toBe('039');
+      expect(areaCodes.kwekwe).toBe('055');
+      expect(areaCodes.chinhoyi).toBe('067');
+      expect(areaCodes.marondera).toBe('065');
+      expect(areaCodes.bindura).toBe('066');
+    });
+  });
 
-  // describe('Input Sanitization', () => {
-  //   test('should handle numbers with spaces and dashes', () => {
-  //     expect(phoneUtils.isValid('077 212 3456')).toBe(true);
-  //     expect(phoneUtils.isValid('077-212-3456')).toBe(true);
-  //     expect(phoneUtils.isValid('(077) 212-3456')).toBe(true);
-  //     expect(phoneUtils.formatLocal('077 212 3456')).toBe('0772123456');
-  //   });
+  describe('Input Sanitization', () => {
+    test('should handle numbers with spaces and dashes', () => {
+      expect(phoneUtils.isValid('077 212 3456')).toBe(true);
+      expect(phoneUtils.isValid('077-212-3456')).toBe(true);
+      expect(phoneUtils.isValid('(077) 212-3456')).toBe(true);
+      expect(phoneUtils.formatLocal('077 212 3456')).toBe('0772123456');
+    });
 
-  //   test('should handle null and undefined inputs', () => {
-  //     expect(phoneUtils.isValid(null)).toBe(false);
-  //     expect(phoneUtils.isValid(undefined)).toBe(false);
-  //     expect(phoneUtils.isValid('')).toBe(false);
-  //   });
+    test('should handle null and undefined inputs', () => {
+      expect(phoneUtils.isValid(null)).toBe(false);
+      expect(phoneUtils.isValid(undefined)).toBe(false);
+      expect(phoneUtils.isValid('')).toBe(false);
+    });
 
-  //   test('should handle non-string inputs', () => {
-  //     expect(phoneUtils.isValid(123456789)).toBe(false);
-  //     expect(phoneUtils.isValid({})).toBe(false);
-  //     expect(phoneUtils.isValid([])).toBe(false);
-  //   });
-  // });
+    test('should handle non-string inputs', () => {
+      expect(phoneUtils.isValid(123456789)).toBe(false);
+      expect(phoneUtils.isValid({})).toBe(false);
+      expect(phoneUtils.isValid([])).toBe(false);
+    });
+  });
 
 }); 
